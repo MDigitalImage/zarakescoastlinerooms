@@ -293,7 +293,9 @@ body{
 
 .header-text2{
     color: white;
-    margin: 15px;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 0px;
     font-size: 14px;
     font-weight: bold;
     text-align: left;
@@ -431,7 +433,7 @@ body{
         align-items: start;
         justify-content: space-between;
         background-color: var(--brown);
-        height: 180px;
+        height: 210px;
         width: 100%;
         vertical-align: middle;
     }
