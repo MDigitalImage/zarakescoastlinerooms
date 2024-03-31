@@ -39,9 +39,6 @@ elementLogo.addEventListener('click', function(){
     window.open("index.html", "_self");
 })
 
-elementLogo2.addEventListener('click', function(){
-    window.open("index.html", "_self");
-})
 
 elementArrowtop.addEventListener('click', function(){
     window.open("index.html", "_self");
@@ -53,11 +50,11 @@ document.querySelectorAll('.header-text').forEach((headerItem) => {
         
         if(headerItemText == 'ΑΡΧΙΚΗ' ){
             elementHome.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΥΠΗΡΕΣΙΕΣ'){
+        }else if(headerItemText == 'ΔΩΜΆΤΙΟ - ΠΑΡΟΧΈΣ'){
             elementServices.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ'){
+        }else if(headerItemText == 'ΠΑΡΑΛΊΑ ΖΑΡΆΚΩΝ'){
             elementAbout.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΕΠΙΚΟΙΝΩΝΙΑ'){
+        }else if(headerItemText == 'ΕΠΙΚΟΙΝΩΝΊΑ'){
             elementContact.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         }else{
             window.open("index.html", "_self");
@@ -117,11 +114,11 @@ document.querySelectorAll('.header-text2').forEach((headerItem) => {
 
         if(headerItemText == 'ΑΡΧΙΚΗ' ){
             elementHome.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΥΠΗΡΕΣΙΕΣ'){
+        }else if(headerItemText == 'ΔΩΜΆΤΙΟ - ΠΑΡΟΧΈΣ'){
             elementServices.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ'){
+        }else if(headerItemText == 'ΠΑΡΑΛΊΑ ΖΑΡΆΚΩΝ'){
             elementAbout.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(headerItemText == 'ΕΠΙΚΟΙΝΩΝΙΑ'){
+        }else if(headerItemText == 'ΕΠΙΚΟΙΝΩΝΊΑ'){
             elementContact.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         }else{
             window.open("index.html", "_self");
@@ -129,55 +126,8 @@ document.querySelectorAll('.header-text2').forEach((headerItem) => {
     })    
 })
 
-document.querySelectorAll('.next-div').forEach((textItem) => {
-    const nextDivItemText = textItem.textContent.trim().toUpperCase();
-    textItem.addEventListener('click', function() {
-        
-        if(nextDivItemText == 'ΑΡΧΙΚΗ' ){
-            elementHome.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(nextDivItemText == 'ΥΠΗΡΕΣΙΕΣ'){
-            elementServices.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });        
-        }else if(nextDivItemText == 'ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ'){
-            elementAbout.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else if(nextDivItemText == 'ΕΠΙΚΟΙΝΩΝΙΑ'){
-            elementContact.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        }else{
-            window.open("index.html", "_self");
-        }
-    })    
-})
 
-document.querySelectorAll('.promo-div').forEach((promo)=> {
-    promo.addEventListener('click', function() {
-        elementServices.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-    })
-})
 
-function sendMail(){
-    var params = {
-        surname: document.getElementById("surname").value,
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        company: document.getElementById("company").value,
-        message: document.getElementById("message").value
-    }
-
-    const serviceID = "service_ium26vu"
-    const templateID = "template_fcszylt"
-
-    emailjs.send(serviceID,templateID,params)
-    .then(
-        res => {
-            document.getElementById("surname").value = ""
-            document.getElementById("name").value = ""
-            document.getElementById("email").value = ""
-            document.getElementById("company").value = ""
-            document.getElementById("message").value = ""
-            alert("Το μήνυμα εστάλη επιτυχώς");
-        }        
-    )
-    
-}
 
 
 
